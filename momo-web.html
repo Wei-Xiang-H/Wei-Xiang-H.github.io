@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>momo網頁作業</title>
+    <link rel="stylesheet" href="reset.css">
     <style>
         .board{
             width: 70%;
@@ -25,7 +26,7 @@
             padding:  10px 10px 0 10px;
         }
         .dot{
-            margin:auto;
+            margin:auto auto 5px auto;
             height: 6px;
             width: 100px;
             display: flex;
@@ -45,13 +46,18 @@
         }
         .introduction{
             color: #DD2726;
-            margin: 0px;
+            margin: 5px auto auto 2px;
             font-size: 13px;
         }
         .product{
             color: #666;
             margin: 0px;
             font-size: 13px;
+            letter-spacing: 1px;
+            overflow:hidden;  
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
         .money{
             color: #D62872;
@@ -114,7 +120,7 @@
             <p></p>
         </div>
         <div class="introduction">光碟主機 現貨快搶★</div>
-        <div class="product">【SONY 索尼】PS5 光碟版主機(CFI-1218A01)</div>
+        <h3 class="product">【SONY 索尼】PS5 光碟版主機(CFI-1218A01)</h3>
         <div class="money">
             <span>$</span>17,580
         </div>
@@ -134,7 +140,7 @@
             <p></p>
         </div>
         <div class="introduction">滿1件折3900</div>
-        <div class="product">【SONY索尼】PS5蜘蛛人2 限量版同捆組</div>
+        <h3 class="product">【SONY索尼】PS5蜘蛛人2 限量版同捆組</h3>
         <div class="money">
             <span>$</span>16,880
         </div>
@@ -151,7 +157,7 @@
             <p></p>
         </div>
         <div class="introduction">數位版超值組</div>
-        <div class="product">【SONY 索尼】PS5 數位版主機 + 充電座</div>
+        <h3 class="product">【SONY 索尼】PS5 數位版主機 + 充電座</h3>
         <div class="money">
             <span>$</span>15,560
         </div>
@@ -170,7 +176,7 @@
             <p></p>
         </div>
         <div class="introduction">滿1件折3900</div>
-        <div class="product">【SONY 索尼】PS5 太空戰士16 同捆組</div>
+        <h3 class="product">【SONY 索尼】PS5 太空戰士16 同捆組</h3>
         <div class="money">
             <span>$</span>15,480
         </div>
@@ -190,7 +196,7 @@
             <p></p>
         </div>
         <div class="introduction">雙手把充電座組</div>
-        <div class="product">【SONY 索尼】PS5 光碟版主機(CFI-1218A01)</div>
+        <h3 class="product">【SONY 索尼】PS5 光碟版主機(CFI-1218A01)</h3>
         <div class="money">
             <span>$</span>20,360
         </div>
@@ -209,7 +215,7 @@
             <p></p>
         </div>
         <div class="introduction">&emsp;</div>
-        <div class="product">【SONY 索尼】PS5 雙手把同捆主機組(ASIA-00441 T)</div>
+        <h3 class="product">【SONY 索尼】PS5 雙手把同捆主機組(ASIA-00441 T)</h3>
         <div class="money">
             <span>$</span>19,380
         </div>
@@ -234,7 +240,7 @@
             <p></p>
             </div>
            <div class="introduction">突破限制的遊玩體驗</div>
-           <div class="product">【【SONY 索尼】PS5 DualSense 原廠無線控制器(火山紅)</div>
+           <h3 class="product">【【SONY 索尼】PS5 DualSense 原廠無線控制器(火山紅)</h3>
            <div class="money">
                <span>$</span>22,80
            </div>
@@ -254,7 +260,7 @@
             <p></p>
         </div>
            <div class="introduction">PS5光碟機+熱門遊戲片</div>
-           <div class="product">【SONY 索尼】PS5 光碟版主機+PS4熱門遊戲多選一(送魔物手機支架)</div>
+           <h3 class="product">【SONY 索尼】PS5 光碟版主機+PS4熱門遊戲多選一(送魔物手機支架)</h3>
            <div class="money">
                <span>$</span>19,370
            </div>
@@ -272,7 +278,7 @@
             <p></p>
         </div>
            <div class="introduction">滿1件折100</div>
-           <div class="product">【SONY 索尼】PS5 遊戲《漫威蜘蛛人2 Marvels Spider-Man 2》中文版</div>
+           <h3 class="product">【SONY 索尼】PS5 遊戲《漫威蜘蛛人2 Marvels Spider-Man 2》中文版</h3>
            <div class="money">
                <span>$</span>1,990
            </div>
@@ -292,7 +298,7 @@
             <p></p>
         </div>
            <div class="introduction">防疫在家一起打電動</div>
-           <div class="product">【SONY 索尼】PS5 蜘蛛人2 限量版同捆組+豪華收納包+主機風扇直立架</div>
+           <h3 class="product">【SONY 索尼】PS5 蜘蛛人2 限量版同捆組+豪華收納包+主機風扇直立架</h3>
            <div class="money">
                <span>$</span>22,600
            </div>
@@ -310,7 +316,7 @@
             <p></p>
         </div>
            <div class="introduction">&emsp;</div>
-           <div class="product">【SONY 索尼】PS5 主機 雙手把同捆組 + HD攝影機</div>
+           <h3 class="product">【SONY 索尼】PS5 主機 雙手把同捆組 + HD攝影機</h3>
            <div class="money">
                <span>$</span>21,260
            </div>
@@ -330,7 +336,7 @@
             <p></p>
         </div>
            <div class="introduction">&emsp;</div>
-           <div class="product">【SONY 索尼】PS5 數位版主機 + 攝影機*1</div>
+           <h3 class="product">【SONY 索尼】PS5 數位版主機 + 攝影機*1</h3>
            <div class="money">
                <span>$</span>17,580
            </div>
