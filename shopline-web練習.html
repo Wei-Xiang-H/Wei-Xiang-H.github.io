@@ -5,82 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .introduction,.extra{
+
+        .introduction,
+        .extra {
             width: 100%;
             background-color: #F7F8F9;
             text-align: center;
         }
-        h2{
+
+        h2 {
             font-size: 180%;
             padding: 24px;
         }
-        .introduction p{
+
+        .introduction p {
             padding-bottom: 30px;
         }
-        .item-group{
+
+        .item-group {
             width: 1060px;
             display: flex;
             margin: auto;
         }
-        h3{
+
+        h3 {
             margin-top: 28px;
             font-size: 180%;
         }
-        .item-group :first-child{
+
+        .item-group :first-child {
             margin-right: 50px;
         }
-        .item-group .txt *{
+
+        .item-group:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .item-group .txt * {
             margin-bottom: 24px;
         }
-        .item-group .img img{
+
+        .item-group .img img {
             height: 100%;
         }
-        .item-group .txt .list ul{
+
+        .item-group .txt ul {
             display: flex;
             flex-wrap: wrap;
-            list-style-position:inside;
-            color: #0061FF;
             margin-right: 0;
+            list-style: none;
         }
-        .item-group .txt .list li {
+
+        .item-group .txt ul li {
             width: 230px;
             margin: 5px 0;
         }
-        .item-group .txt .list li span{
+
+        .item-group .txt ul li{
             color: black;
             margin: 5px 0;
         }
-        .item-group .txt a{
+
+        li::before {
+            content: '';
+            display: inline-block;
+            background-color: #0061FF;
+            width: 8px;
+            height: 8px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        .item-group .txt a {
             text-underline-offset: 6px;
             color: #0061FF;
+            text-decoration: none;
         }
-        .extra-group{
+
+        .item-group .txt a .link-txt {
+            border-bottom: 1px solid #0061FF;
+            margin-right: 0;
+        }
+
+        a::after {
+            content: '⇨';
+            margin-left: 0;
+            transition: .5s;
+        }
+
+        a:hover::after {
+            margin-left: 2em;
+        }
+
+        .extra-group {
             width: 70%;
             display: flex;
             flex-wrap: wrap;
             margin: auto;
-            justify-content: center; 
+            justify-content: center;
             padding-bottom: 50px;
         }
-        .extraItem{
-            margin: 50px 30px auto;
-            width: 290px;
+
+        .extraItem {
+            margin: 50px 10px auto;
+            width: 30%;
         }
-        h3{
+
+        h3 {
             padding-top: 40px;
             margin: 40px auto 0;
         }
-        h5{
+
+        h5 {
             font-size: 125%;
             margin: 15px auto;
         }
-
     </style>
 </head>
+
 <body>
     <div class="introduction">
         <h2>單一平台就能助你
@@ -95,44 +141,38 @@
                 <br>輕鬆打造全能電商網站
             </h3>
             <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。</p>
-            <div class="list">
-                <ul>
-                    <li><span>豐富版型主題與字型搭配</span></li>
-                    <li><span>SEO 搜尋引擎優化</span></li>
-                    <li><span>RWD 響應式網頁設計</span></li>
-                    <li><span>一頁商店</span></li>
-                    <li><span>獨有網址 ＆ SSL 安全憑證</span></li>
-                    <li><span>開放 HTML／CSS 編輯</span></li>
-                </ul>
-            </div>
-            
-            <a href="">查看開店祕笈 ⇨</a>
+            <ul class="list">
+                <li>豐富版型主題與字型搭配</li>
+                <li>SEO 搜尋引擎優化</li>
+                <li>RWD 響應式網頁設計</li>
+                <li>一頁商店</li>
+                <li>獨有網址 ＆ SSL 安全憑證</li>
+                <li>開放 HTML／CSS 編輯</li>
+            </ul>
+            <a href=""><span class="link-txt">查看開店祕笈</span></a>
         </div>
         <div class="img">
             <img src="https://picsum.photos/450/430/?random=10">
         </div>
     </div>
     <div class="item-group">
-        <div class="img">
-            <img src="https://picsum.photos/450/430/?random=8">
-        </div>
         <div class="txt">
             <h3>免寫程式、多款版型
                 <br>輕鬆打造全能電商網站
             </h3>
             <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。</p>
-            <div class="list">
-                <ul>
-                    <li><span>豐富版型主題與字型搭配</span></li>
-                    <li><span>SEO 搜尋引擎優化</span></li>
-                    <li><span>RWD 響應式網頁設計</span></li>
-                    <li><span>一頁商店</span></li>
-                    <li><span>獨有網址 ＆ SSL 安全憑證</span></li>
-                    <li><span>開放 HTML／CSS 編輯</span></li>
-                </ul>
-            </div>
-            
-            <a href="">查看開店祕笈 ⇨</a>
+            <ul class="list">
+                <li>豐富版型主題與字型搭配</li>
+                <li>SEO 搜尋引擎優化</li>
+                <li>RWD 響應式網頁設計</li>
+                <li>一頁商店</li>
+                <li>獨有網址 ＆ SSL 安全憑證</li>
+                <li>開放 HTML／CSS 編輯</li>
+            </ul>
+            <a href=""><span class="link-txt">查看開店祕笈</span></a>
+        </div>
+        <div class="img">
+            <img src="https://picsum.photos/450/430/?random=8">
         </div>
     </div>
     <div class="item-group">
@@ -141,18 +181,16 @@
                 <br>輕鬆打造全能電商網站
             </h3>
             <p>不會寫程式也能輕鬆架設品牌電商官網！任何產業都能找到合適的專業設計版型，以滑鼠拖曳就能完成網頁編輯，讓架設網站就像堆積木一樣簡單。</p>
-            <div class="list">
-                <ul>
-                    <li><span>豐富版型主題與字型搭配</span></li>
-                    <li><span>SEO 搜尋引擎優化</span></li>
-                    <li><span>RWD 響應式網頁設計</span></li>
-                    <li><span>一頁商店</span></li>
-                    <li><span>獨有網址 ＆ SSL 安全憑證</span></li>
-                    <li><span>開放 HTML／CSS 編輯</span></li>
-                </ul>
-            </div>
-            
-            <a href="">查看開店祕笈 ⇨</a>
+            <ul class="list">
+                <li>豐富版型主題與字型搭配</li>
+                <li>SEO 搜尋引擎優化</li>
+                <li>RWD 響應式網頁設計</li>
+                <li>一頁商店</li>
+                <li>獨有網址 ＆ SSL 安全憑證</li>
+                <li>開放 HTML／CSS 編輯</li>
+            </ul>
+
+            <a href=""><span class="link-txt">查看開店祕笈</span></a>
         </div>
         <div class="img">
             <img src="https://picsum.photos/450/430/?random=9">
@@ -204,7 +242,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 </body>
 </html>
