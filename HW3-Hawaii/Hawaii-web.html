@@ -64,17 +64,10 @@
             color: rgb(122, 122, 122);
         }
 
-        .item-group:nth-child(odd) .item-block>div:first-child {
-            margin-right: 30px;
-        }
-
-        .item-group:nth-child(even) .item-block>div:last-child {
-            margin-right: 30px;
-        }
-
         .item-block {
             display: flex;
             margin-bottom: 30px;
+            gap: 30px;
         }
 
         .item-group:nth-child(even) .item-block {
@@ -117,8 +110,8 @@
         .item-right {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            align-items: stretch;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
         }
 
         .r-item span {
