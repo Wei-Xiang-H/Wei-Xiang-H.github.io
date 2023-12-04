@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toyota-web</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .item-group{
+            width: 1200px;
+            margin: auto;
+            position: relative;
+            margin: 30px auto;
+        }
+        .item-backgroud{
+            position: absolute;
+            background-color: rgb(241, 241, 241);
+            height: 300px;
+            width: 450px;
+            left: 625px;
+            top: 100px;
+            z-index: 1;
+        }
+        .all-item :nth-child(even) .item-backgroud{
+            left: 35%;
+        }
+        .item-img{
+            position: absolute;
+            width: 700px;
+            height: 430px;
+            right: 200px;
+            top: 220px;
+            z-index: 2;
+
+        }
+        .item-img img{
+            width: 100%;
+            height: 100%;
+        }
+        .item-img .item-img-button{
+            position: absolute;
+            font-size: 70px;
+            right: -40px;
+            top: 40%;
+        }
+        .all-item :nth-child(even) .item-img-button{
+            left: -40px;
+        }
+
+        .item-content{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            top: 60px;
+            left: 80px;
+            z-index: 3;
+        }
+        .all-item :nth-child(even) .item-title{
+            margin-left:750px;
+        }
+        .all-item :nth-child(even) .item-info{
+            margin-left:380px;
+        }
+        .item-title{
+            width: 370px;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item-title .item-title-group{
+            width: 100%;
+            background-color: red;
+            display: flex;
+            align-items: center;
+        }
+        .all-item :nth-child(even) .item-title-group {
+            direction: rtl;
+        }
+        .item-title  .item-title-group h3{
+            font-size: 50px;
+            font-weight:lighter;
+        }
+        .item-title .item-title-group .num{
+            writing-mode: vertical-rl;
+            font-size: 140px;
+            margin: auto 10px -10px -15px ;
+            font-weight:lighter;
+        }
+        .all-item :nth-child(even) .num{
+            margin: auto -15px -10px 10px ;
+        }
+        .item-title h4,p{
+            display: inline-block;
+            width: 100%;
+            background-color: black;
+        }
+        .item-title h4{
+            font-size: 32px;
+            padding: 10px 25px;
+        }
+        .item-title p{
+            font-size: 20px;
+            padding: 0 25px 20px;
+            line-height: 1.5;
+        }
+        .item-info{
+            background-color: rgb(241, 241, 241);
+            width: 700px;
+            padding: 20px;
+            margin-top: 170px;
+            margin-left: 30px;
+        }
+        .item-info h5{
+            color: red;
+            display: inline;
+            font-size: 18px;
+        }
+        .item-info .line{
+            border-top: 2px solid red;
+            display: inline-block;
+            width: 450px;
+            margin-bottom: 5px;
+        }
+        .item-info h6{
+            color: white;
+            background-color: black;
+            display: inline-block;
+            padding: 5px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .item-info li{
+            padding: 5px;
+            margin-left: 20px;
+            line-height: 1.5;
+        }
+        .item-info li::marker{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section class="all-item">
+        <div class="item-group">
+            <div class="item-content">
+                <div class="item-title">
+                    <div class="item-title-group">
+                        <span class="num">01</span>
+                        <h3>操控樂趣</h3>
+                    </div>
+                    <h4>人人滿意的駕駛體驗</h4>
+                    <p>透過最佳重量配置，實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、</p>
+                </div>
+                <div class="item-info">
+                    <h5>因為我們做了這些革新</h5>
+                    <div class="line"></div>
+                    <ul>
+                        <h6>低重心設計</h6>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                        <h6>車體剛性強化</h6>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                        <h6>四輪獨立懸吊</h6>
+                        <li>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-backgroud"></div>
+            <div class="item-img">
+                <img src="https://picsum.photos/300/200/?random=10">
+                <div class="item-img-button">▶️</div>
+            </div>
+        
+        </div>
+        <div class="item-group">
+            <div class="item-content">
+                <div class="item-title">
+                    <div class="item-title-group">
+                        <span class="num">02</span>
+                        <h3>操控樂趣</h3>
+                    </div>
+                    <h4>人人滿意的駕駛體驗</h4>
+                    <p>透過最佳重量配置，實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、</p>
+                </div>
+                <div class="item-info">
+                    <h5>因為我們做了這些革新</h5>
+                    <div class="line"></div>
+                    <ul>
+                        <h6>低重心設計</h6>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                        <h6>車體剛性強化</h6>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                        <h6>四輪獨立懸吊</h6>
+                        <li>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-backgroud"></div>
+            <div class="item-img">
+                <img src="https://picsum.photos/300/200/?random=10">
+                <div class="item-img-button">▶️</div>
+            </div>
+        
+        </div>
+        <div class="item-group">
+            <div class="item-content">
+                <div class="item-title">
+                    <div class="item-title-group">
+                        <span class="num">03</span>
+                        <h3>操控樂趣</h3>
+                    </div>
+                    <h4>人人滿意的駕駛體驗</h4>
+                    <p>透過最佳重量配置，實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、實現平順起步、</p>
+                </div>
+                <div class="item-info">
+                    <h5>因為我們做了這些革新</h5>
+                    <div class="line"></div>
+                    <ul>
+                        <h6>低重心設計</h6>
+                        <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                        <h6>車體剛性強化</h6>
+                        <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                        <h6>四輪獨立懸吊</h6>
+                        <li>搭載全新四輪獨立懸吊設定，透過懸吊的高承載強度，保持輪胎抓地力，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭樂趣。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-backgroud"></div>
+            <div class="item-img">
+                <img src="https://picsum.photos/300/200/?random=10">
+                <div class="item-img-button">▶️</div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
