@@ -152,16 +152,18 @@
 
         .item-info h5 {
             color: red;
-            display: inline;
+            display: flex;
             font-size: 18px;
-            line-height: 5px;
+            line-height: 5px;   
         }
-
-        .item-info .line {
-            border-top: 2px solid red;
-            display: inline-block;
-            width: 505px;
-            margin-bottom: 5px;
+        .item-info h5::after{
+            display: block;
+            content: '';
+            border-bottom: 1px solid red;
+            height: 0;
+            width: 20px;
+            flex-grow: 1;
+            margin-left: 5px;
         }
         .item-info ul{
             padding-top: 5px;
@@ -203,8 +205,9 @@
                     <div class="item-backgroud"></div>
                 </div>
                 <div class="item-info">
-                    <h5>因為我們做了這些革新</h5>
-                    <div class="line"></div>
+                    <div class="item-info-slg">
+                        <h5>因為我們做了這些革新</h5>
+                    </div>
                     <ul>
                         <h6>低重心設計</h6>
                         <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
@@ -235,8 +238,9 @@
                     <div class="item-backgroud"></div>
                 </div>
                 <div class="item-info">
-                    <h5>因為我們做了這些革新</h5>
-                    <div class="line"></div>
+                    <div class="item-info-slg">
+                        <h5>因為我們做了這些革新</h5>
+                    </div>
                     <ul>
                         <h6>低重心設計</h6>
                         <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
@@ -267,8 +271,9 @@
                     <div class="item-backgroud"></div>
                 </div>
                 <div class="item-info">
-                    <h5>因為我們做了這些革新</h5>
-                    <div class="line"></div>
+                    <div class="item-info-slg">
+                        <h5>因為我們做了這些革新</h5>
+                    </div>
                     <ul>
                         <h6>低重心設計</h6>
                         <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
