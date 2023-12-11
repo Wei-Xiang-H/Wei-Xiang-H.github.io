@@ -72,7 +72,7 @@
         body section.slogan:first-of-type {
             margin-top: 96px;
         }
-        .slogan-background, .slogan-grid, .data-background, .step-background{
+        .slogan-background, .slogan-grid-background, .data-background, .step-background{
             width: 1200px;
             margin: auto;
         }
@@ -182,19 +182,22 @@
             z-index: 1;
         }
         /*slogan-grid--------------------------------------------------------------------------*/
-        .slogan-grid .slogan-grid-title{
+        .slogan-grid{
+            position: relative;
+        }
+        .slogan-grid .slogan-grid-background .slogan-grid-title{
             font-size: 42px;
             font-weight: 300;
             line-height: 1.3em;
             margin-bottom: 30px;
         }
-        .slogan-grid .slogan-grid-group{
+        .slogan-grid .slogan-grid-background .slogan-grid-group{
             display: grid;
             min-height:880px;
             grid-template: 1fr 1fr/1fr 1fr 1fr;
             gap: 30px;
         }
-        .slogan-grid .slogan-grid-group .grid-card{
+        .slogan-grid .slogan-grid-background .slogan-grid-group .grid-card{
             padding: 48px 40px 42px 42px;
             font-size: 14px;
             display: flex;
@@ -222,6 +225,12 @@
             text-decoration: none;
             font-weight: bolder;
             color: #5d6678;
+        }
+        .slogan-grid .grid-cloud{
+            position: absolute;
+            right: -120px;
+            top: 30px;
+            height: 150px;
         }
         /*data------------------------------------------------------------------------*/
         .data{
@@ -301,6 +310,9 @@
             bottom: 60px;
         }
         /* step-------------------------------------------------------------------------------------------------*/
+        .step{
+            position: relative;
+        }
         .step-background .step-title{       /*.step-title和.step-group中間margin重疊*/
             font-size: 42px;
             margin-bottom: 50px;
@@ -365,6 +377,41 @@
             align-self: self-start;
             padding-top: 15px;
         }
+        .step .step-arrow1{
+            position: absolute;
+            top: 370px;
+            left: 700px;
+        }
+        .step .step-arrow2{
+            position: absolute;
+            top: 680px;
+            left: 680px;
+        }
+        .step .step-arrow3{
+            position: absolute;
+            bottom: 525px;
+            left: 620px;
+        }
+        .step .step-arrow4{
+            position: absolute;
+            bottom: 260px;
+            left: 590px;
+        }
+        .step .step-cloud1{
+            position: absolute;
+            right: 0;
+            top: 250px;
+        }
+        .step .step-cloud2{
+            position: absolute;
+            left: 0;
+            top: 620px;
+        }
+        .step .step-cloud3{
+            position: absolute;
+            right: 0;
+            bottom: 115px;
+        }
     </style>
 </head>
 <body>
@@ -425,45 +472,48 @@
         </div>
     </section>
     <section class="slogan-grid">
-        <div class="slogan-grid-title">We provide a wide range<br>of creative services</div>
-        <div class="slogan-grid-group">
-            <div class="grid-card">
-                <img src="/img/asset 4.svg">
-                <p class="cardtitle">Web Design & Brending</p>
-                <p class="cardtxt">A great brand combines design and conveys company’s value messaging to evoke emotion and drive strategy.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="grid-card">
-                <img src="/img/asset 5.svg">
-                <p class="cardtitle">Graphic Design</p>
-                <p class="cardtxt">Rich experience plus unlimited imagination create our successful service discovered by clients.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="grid-card">
-                <img src="/img/asset 6.svg">
-                <p class="cardtitle">Video Production</p>
-                <p class="cardtxt">Creating and handling professional video is our strong point. It plays major role in your digital business strategy.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="grid-card">
-                <img src="/img/asset 4.svg">
-                <p class="cardtitle">SEO</p>
-                <p class="cardtxt">We provide everything your site needs to perform at it’s highest capabilities on the major search engines.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="grid-card">
-                <img src="/img/asset 5.svg">
-                <p class="cardtitle">Digital Marketing</p>
-                <p class="cardtxt">We do collateral design, interactive design, hoarding, signage, presentation centres, and more.</p>
-                <a href="#">READ MORE</a>
-            </div>
-            <div class="grid-card">
-                <img src="/img/asset 6.svg">
-                <p class="cardtitle">Infographics</p>
-                <p class="cardtxt">Turn your data into captivating artwork that will keep your audience engaged. Our team can help you with it.</p>
-                <a href="#">READ MORE</a>
+        <div class="slogan-grid-background">
+            <div class="slogan-grid-title">We provide a wide range<br>of creative services</div>
+            <div class="slogan-grid-group">
+                <div class="grid-card">
+                    <img src="/img/asset 4.svg">
+                    <p class="cardtitle">Web Design & Brending</p>
+                    <p class="cardtxt">A great brand combines design and conveys company’s value messaging to evoke emotion and drive strategy.</p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="grid-card">
+                    <img src="/img/asset 5.svg">
+                    <p class="cardtitle">Graphic Design</p>
+                    <p class="cardtxt">Rich experience plus unlimited imagination create our successful service discovered by clients.</p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="grid-card">
+                    <img src="/img/asset 6.svg">
+                    <p class="cardtitle">Video Production</p>
+                    <p class="cardtxt">Creating and handling professional video is our strong point. It plays major role in your digital business strategy.</p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="grid-card">
+                    <img src="/img/asset 4.svg">
+                    <p class="cardtitle">SEO</p>
+                    <p class="cardtxt">We provide everything your site needs to perform at it’s highest capabilities on the major search engines.</p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="grid-card">
+                    <img src="/img/asset 5.svg">
+                    <p class="cardtitle">Digital Marketing</p>
+                    <p class="cardtxt">We do collateral design, interactive design, hoarding, signage, presentation centres, and more.</p>
+                    <a href="#">READ MORE</a>
+                </div>
+                <div class="grid-card">
+                    <img src="/img/asset 6.svg">
+                    <p class="cardtitle">Infographics</p>
+                    <p class="cardtxt">Turn your data into captivating artwork that will keep your audience engaged. Our team can help you with it.</p>
+                    <a href="#">READ MORE</a>
+                </div>
             </div>
         </div>
+        <img class="grid-cloud" src="/img/asset 21.svg">
     </section>
     <section class="slogan">
         <div class="slogan-background">
@@ -571,6 +621,13 @@
                 </div>
             </div>
         </div>
+        <img class="step-arrow1" src="/img/arrow-1.svg" >
+        <img class="step-arrow2" src="/img/arrow-2.svg" >
+        <img class="step-arrow3" src="/img/arrow-3.svg" >
+        <img class="step-arrow4" src="/img/arrow-4.svg" >
+        <img class="step-cloud1" src="/img/asset 31.svg" >
+        <img class="step-cloud2" src="/img/asset 30.svg" >
+        <img class="step-cloud3" src="/img/asset 29.svg" >
     </section>
 </body>
 </html>
