@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>maikon-web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <style>
         *{
             padding: 0;
@@ -40,7 +43,7 @@
             line-height: 54px;
             padding: 4px 2px;
             margin: 0 10px;
-            font-weight: lighter;
+            font-weight: 300;
         }
         .header .header-group nav a:hover{
             border-bottom: 1px solid #5d6678;
@@ -72,7 +75,8 @@
         body section.slogan:first-of-type {
             margin-top: 96px;
         }
-        .slogan-background, .slogan-grid-background, .data-background, .step-background{
+        .slogan-background, .slogan-grid-background, .data-background, .step-background, .project-backgourd
+        , .consultation-background, .subscribe-background, .about-background, .footer-background{
             width: 1200px;
             margin: auto;
         }
@@ -93,8 +97,10 @@
         .slogan-item-group .item-contant h3{
             font-size: 42px;
             margin-top: 60px;
-            font-weight: 100;
+            font-weight: 300;
             line-height: 1.3em;
+            padding-right: 40px;
+            color: #1d273b;
         }
         body section.slogan:first-of-type .slogan-item-group .item-contant h3{
             font-size: 58px;
@@ -104,6 +110,7 @@
             color: #5d6678;
             margin: 20px 0;
             line-height: 1.8em;
+            font-weight: 300;
         }
         .slogan-item-group .item-contant .contant{
             width: 400px;
@@ -130,11 +137,12 @@
             box-sizing: border-box;
             display: inline-block;
             font-size: 14px;
-            color: black;
+            color: #5d6678;
             border-radius: 5px;
             margin:0  30px 0 0;
             border: 1px solid rgb(221, 221, 221);
             transition: 0.5s;
+            font-weight: bold;
         }
         .item-contant-button .button-p:hover{
             background-color: #1fdE82;
@@ -150,7 +158,7 @@
             background-color: #3b3d42;
         }
         body section.slogan:first-of-type .slogan-item-group .item-contant-button .button-p:nth-child(1){
-            padding: 10px 42px ;
+            padding: 10px 24px ;
         }
         
         .slogan-item-group .item-contant-button a img{
@@ -164,20 +172,20 @@
         }
         .slogan-background .slogan1-right{
             position: absolute;
-            left: 45%;
-            top: 70px;
+            left: 48%;
+            top: 65px;
             z-index: 1;
         }
         .slogan-background .slogan3-left{
             width: 360px;
             height: 140px;
             position: absolute;
-            left: 41%;
+            left: 43%;
             top: 480px;
         }
         .slogan-background .slogan3-right{
             position: absolute;
-            left: 74%;
+            left: 76%;
             top: 45%;
             z-index: 1;
         }
@@ -219,6 +227,7 @@
         .slogan-grid-group .grid-card .cardtxt{
             color: #5d6678;
             line-height: 1.8em;
+            font-weight: 300;
         }
         .slogan-grid-group .grid-card a{
             margin-top: auto;
@@ -228,7 +237,7 @@
         }
         .slogan-grid .grid-cloud{
             position: absolute;
-            right: -120px;
+            right: 0px;
             top: 30px;
             height: 150px;
         }
@@ -237,6 +246,7 @@
             background-color: #2570ff;
             color: white;
             position: relative;
+            margin-top: 50px;
         }
         .data-background .data-item-group{
             display: flex;
@@ -261,7 +271,8 @@
         }
         .item-num-group .item-num .txt{
             font-size: 14px;
-            line-height: 1.3em;
+            line-height: 1.8em;
+            font-weight: 400;
         }
         .data-background .data-item-group .item-txt{
             width: 50%;
@@ -271,13 +282,15 @@
             font-size: 42px;
             width: 375px;
             line-height: 1.4em;
-            font-weight: 100;
+            font-weight: 300;
             padding-top: 35px;
         }
         .data-background .data-item-group .item-txt p{
             margin-top: 30px;
             width: 375px;
-            line-height: 1.5em;
+            line-height: 1.8em;
+            font-weight: 300;
+            font-size: 14px;
         }
         .data-background .data-item-group .item-txt a{
             display: inline-block;
@@ -316,6 +329,7 @@
         .step-background .step-title{       /*.step-title和.step-group中間margin重疊*/
             font-size: 42px;
             margin-bottom: 50px;
+            font-weight: 300;
         }
         .step-background  .step-group {
             display: flex;
@@ -338,12 +352,15 @@
         .step-contant .step-contant-txt .contant-title{
             font-size: 22px;
             margin-bottom: 14px;
+            font-weight: 400;
+            color: #1d273b;
         }
         .step-contant .step-contant-txt .p{
             font-size: 14px;
             color: #5d6678;
             margin: 14px 0;
             line-height: 2em;
+            font-weight: 300;
         }
         .step-background .step-group:nth-of-type(odd){
             flex-direction: row-reverse;
@@ -411,6 +428,300 @@
             position: absolute;
             right: 0;
             bottom: 115px;
+        }
+        /*project------------------------------------------------------------------------------------------------*/
+        .project{
+            padding-bottom: 80px;
+            position: relative;
+            background-color: rgb(252, 252, 252);
+        }
+        .project .project-backgourd .project-title{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+        .project-backgourd .project-title .project-titletxt{
+            font-size: 42px;
+            width: 505px;
+            line-height: 1.2em;
+            color: #1d273b;
+            font-weight: 300;
+        }
+        .project-backgourd .project-title .project-button{
+            display: inline-block;
+            font-size: 14px;
+            color: white;
+            background-color: #1fdE82;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 12px 19.5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.5s;
+            align-self: flex-end;
+            box-shadow: 0px 0px 20px 0px #7bffbf;
+        }
+        .project-backgourd .project-title .project-button:hover{
+            background-color: #5d6678;
+        }
+        .project .project-backgourd .project-card-group{
+            display: flex;
+            gap: 30px;
+        }
+        .project-backgourd .project-card-group .project-card{
+            position: relative;
+            box-shadow: 0px 0px 20px 0px rgb(233, 233, 233);
+            
+        }
+        .project-card-group .project-card img{
+            width: 380px;
+            vertical-align: middle;
+            border-radius: 10px;
+        }
+        .project-card-group .project-card .project-card-contant{
+            height: 415px;
+            width: 380px;
+            box-sizing: border-box;
+            background-color: #1fdE82;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            align-items:flex-start;
+            position: absolute;
+            top: 0px;
+            opacity: 0;
+            border-radius: 10px;
+            transition: .5s;
+        }
+        .project-card-group .project-card .project-card-contant:hover{
+            opacity: 97%;
+        }
+        .project-card-group .project-card .project-card-contant p{
+            font-size: 40px;
+        }
+        .project-card-group .project-card .project-card-contant a{
+            margin: auto;
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+            margin-bottom: 30px;
+            margin-left: 0;
+            font-weight: bolder;
+            transition: .5s;
+        }
+        .project-card-group .project-card .project-card-contant a:hover{
+            color: #5d6678;
+        }
+        .project .project-clound{
+            position: absolute;
+            top: 78px;
+        }
+        /*consultation------------------------------------------------------------------------------------*/
+        .consultation{
+            position: relative;
+            padding-bottom: 80px;
+        }
+        .consultation .consultation-background{
+            display: flex;
+        }
+        .consultation .consultation-background .consultation-imgblock{
+            width: 55%;
+        }
+        .consultation .consultation-background .consultation-imgblock img{
+            padding-left: 40px;
+            vertical-align: middle;
+        }
+        .consultation .consultation-background .consultation-item-group{
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 20px 0px rgb(235, 235, 235);
+            padding: 40px 50px 20px;
+            border-radius: 10px;
+            width: 360px;
+            height: auto;
+            margin: 30px 0;
+        }
+        .consultation-background .consultation-item-group .consultation-item-title{
+            font-size: 42px;
+            width: 360px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .consultation-background .consultation-item-group .text,.consultation-item-group .email,.consultation-item-group textarea{
+            font-size: 14px;
+            padding: 10px 14px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .consultation-background .consultation-item-group textarea{
+            resize: vertical;
+            height: 110px;
+            min-height: 98px;
+        }
+        .consultation-background .consultation-item-group .consultation-item-button{
+            display: inline-block;
+            font-size: 14px;
+            color: white;
+            background-color: #1fdE82;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 10px 20px 8px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.5s;
+            align-self: flex-start;
+            box-shadow: 0px 0px 20px 0px #7bffbf;
+        }
+        .consultation-background .consultation-item-group .consultation-item-button:hover{
+            background-color: #5d6678;
+        }
+        .consultation .consultation-cloud{
+            position: absolute;
+            right: 0;
+            top: 30px;
+        }
+        /*subscribe-------------------------------------------------------------------------------------*/
+        .subscribe{
+            position: relative;
+            padding-bottom: 80px;
+            background-color: rgb(252, 252, 252);
+        }
+        .subscribe .subscribe-background{
+            margin: auto;
+            text-align: center;
+        }
+        .subscribe .subscribe-background .subscribe-title{
+            font-size: 42px;
+            line-height: 1.4em;
+            width: 470px;
+            margin: auto auto 30px;
+            font-weight: 300;
+        }
+        .subscribe .subscribe-background input{
+            padding: 15px 130px 14px 18px;
+            font-size: 14px;
+            box-shadow: 0px 4px 44px 0px rgba(17,29,48,0.06);
+            border: 1px solid white;
+            width: 312px;
+            border-radius: 5px;
+        }
+        .subscribe .subscribe-background .subscribe-button{
+            display: inline-block;
+            margin-left: -5px;
+            font-size: 14px;
+            color: white;
+            background-color: #1fdE82;
+            text-decoration: none;
+            border: 1px solid white;
+            padding: 17px 20px 15px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.5s;
+            box-shadow: 0px 0px 20px 0px #7bffbf;
+        }
+        .subscribe .subscribe-background .subscribe-button:hover{
+            background-color: #5d6678;
+        }
+        .subscribe .subscribe-clound1{
+            position: absolute;
+            top: 40px;
+        }
+        .subscribe .subscribe-clound2{
+            position: absolute;
+            right: 40px;
+            bottom: 100px;
+        }
+        /*about-----------------------------------------------------------------------------------------*/
+        .about{
+            padding-bottom: 60px;
+        }
+        .about .about-background{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .about-background .about-card{
+            padding: 15px;
+        }
+        .about-background .about-card h4{
+            margin-bottom: 35px;
+            padding-top: 15px;
+            font-size: 22px;
+            color: #1d273b;
+            font-weight: 400;
+        }
+        .about-background .about-card a, .about-card .about-text{
+            text-decoration: none;
+            color: #5d6678;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .about-background .about-card a:not(.phone,.mail):hover{
+            color: #1fdE82;
+        }
+        .about-background .about-card a span{
+            color: #1fdE82;
+        }
+        .about-background .about-card img{
+            vertical-align: middle;
+            margin-bottom: 35px;
+        }
+        .about-card .phone, .about-card .mail, .about-card .about-txt, .about-card .about-text, .about-card .about-svg{
+            display: block;
+            width: 270px;
+            margin-bottom: 13px;
+        }
+        .about-card .about-text{
+            line-height: 1.5em;
+            letter-spacing: 0.28px;
+        }
+        .about-card .about-svg .svg svg{
+            border: 0.5px solid #5d6678;
+            border-radius: 50%;
+            margin-right: 7px;
+            padding: 10px;
+        }
+        .about-card .about-svg .svg svg:hover{
+            background-color: #1fdE82;
+            border-color: white;
+        }
+        .about-card .about-svg .svg svg:hover > g,.svg svg:hover > path{
+            fill:white;
+        }
+        /*footer------------------------------------------------------------------------------*/
+        .footer{
+            padding: 20px 0;
+        }
+        .footer .footer-background{
+            color: #5d6678;
+            font-size: 12px;
+            font-weight: 300;
+        }
+        .footer .footer-background a{
+            text-decoration: none;
+        }
+        .footer .footer-background .tag{
+            color: #5d6678;
+        }
+        .footer .footer-background .Zemez{
+            color: #1fdE82;
+        }
+        .footer .footer-background .Zemez:hover{
+            color: #5d6678;
+        }
+        .footer-background p,.footer-background .tag{
+            display: inline-block;
+        }
+        .footer-background .tag:hover{
+            color: #1fdE82;
+        }
+        .footer-background .tag:first-of-type{
+            margin-left: 580px;
+        }
+        .footer-background .tag:last-of-type{
+            margin-left: 50px;
         }
     </style>
 </head>
@@ -513,7 +824,7 @@
                 </div>
             </div>
         </div>
-        <img class="grid-cloud" src="/img/asset 21.svg">
+        <img class="grid-cloud" src="/img/asset 33.svg">
     </section>
     <section class="slogan">
         <div class="slogan-background">
@@ -629,5 +940,125 @@
         <img class="step-cloud2" src="/img/asset 30.svg" >
         <img class="step-cloud3" src="/img/asset 29.svg" >
     </section>
+    <section class="project">
+        <div class="project-backgourd">
+            <div class="project-title">
+                <p class="project-titletxt">Our team's work with Projects</p>
+                <a href="#" class="project-button">ALL PROJECTS</a>
+            </div>
+            <div class="project-card-group">
+                <div class="project-card">
+                    <img src="/img/project-1.jpg">
+                    <div class="project-card-contant">
+                        <p class="project-card-txt">Minimal Creative "Impuls"</p>
+                        <a href="#">VIEW SITE </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/img/project-2.jpg">
+                    <div class="project-card-contant">
+                        <p class="project-card-txt">Travel Company "Tour Up"</p>
+                        <a href="#">VIEW SITE </a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="/img/project-3.jpg">
+                    <div class="project-card-contant">
+                        <p class="project-card-txt">Restaurant Pizza "Little Italy"</p>
+                        <a href="#">VIEW SITE </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="/img/asset 32.svg" class="project-clound">
+    </section>
+    <section class="consultation">
+        <div class="consultation-background">
+            <div class="consultation-imgblock">
+                <img src="/img/consultation.svg" class="consultation-img">
+            </div>
+            <div class="consultation-item-group">
+                <p class="consultation-item-title">Sign up for our consultation</p>
+                <input class="text" type="text"size="40" placeholder="Name">
+                <input class="email" type="email" size="40" placeholder="Email" >
+                <textarea name="Message" cols="30"  rows="10"placeholder="Message"></textarea>
+                <a href="#"class="consultation-item-button">SEND</a>
+            </div>
+        </div>
+        <img src="/img/asset 33.svg"  class="consultation-cloud">
+    </section>
+    <section class="subscribe">
+        <div class="subscribe-background">
+            <p class="subscribe-title">Subscribe to our news and learn more</p>
+            <input type="email" placeholder="Your email" >
+            <a href="#" class="subscribe-button">SUBSCRIBE</a>
+        </div>
+        <img src="/img/asset 20.svg"class="subscribe-clound1">
+        <img src="/img/asset 34.svg"class="subscribe-clound2">
+    </section>
+    <section class="about">
+        <div class="about-background">
+            <div class="about-card">
+                <a href="#" class="img">
+                    <img src="/img/asset 0.png">
+                </a>
+                <a href="#" class="phone"><span>Phone:</span> + 1 (045) - 224 - 12 - 67</a>
+                <a href="#" class="mail"><span>Mail:</span> info@demolink.org</a>
+            </div>
+            <div class="about-card">
+                <h4>Services</h4>
+                <a href="#" class="about-txt">Web design & brending</a>
+                <a href="#" class="about-txt">Web development</a>
+                <a href="#" class="about-txt">Full Optimization</a>
+                <a href="#" class="about-txt">Research & Strategy</a>
+                <a href="#" class="about-txt">Management & Marketing</a>
+                <a href="#" class="about-txt">Free support</a>
+            </div>
+            <div class="about-card">
+                <h4>About Company</h4>
+                <a href="#" class="about-txt">About us</a>
+                <a href="#" class="about-txt">Team</a>
+                <a href="#" class="about-txt">Case studio</a>
+                <a href="#" class="about-txt">Contacts</a>
+            </div>
+            <div class="about-card">
+                <h4>Our Social Networks</h4>
+                <p class="about-text">Join us in the social networks and keep up on the latest news.</p>
+                <div class="about-svg">
+                    <a href="#" class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,256,256">
+                            <g fill="#818a91" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(8.53333,8.53333)"><path d="M15,4c-4.186,0 -9.61914,1.04883 -9.61914,1.04883l-0.01367,0.01563c-1.90652,0.30491 -3.36719,1.94317 -3.36719,3.93555v6v0.00195v5.99805v0.00195c0.00384,1.96564 1.4353,3.63719 3.37695,3.94336l0.00391,0.00586c0,0 5.43314,1.05078 9.61914,1.05078c4.186,0 9.61914,-1.05078 9.61914,-1.05078l0.00195,-0.00195c1.94389,-0.30554 3.37683,-1.97951 3.37891,-3.94727v-0.00195v-5.99805v-0.00195v-6c-0.00288,-1.96638 -1.43457,-3.63903 -3.37695,-3.94531l-0.00391,-0.00586c0,0 -5.43314,-1.04883 -9.61914,-1.04883zM12,10.39844l8,4.60156l-8,4.60156z"></path></g></g>
+                            </svg>
+                    </a>
+                    <a href="#" class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,256,256">
+                            <g fill="#818a91" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M17.525,9h-3.525v-2c0,-1.032 0.084,-1.682 1.563,-1.682h1.868v-3.18c-0.909,-0.094 -1.823,-0.14 -2.738,-0.138c-2.713,0 -4.693,1.657 -4.693,4.699v2.301h-3v4l3,-0.001v9.001h4v-9.003l3.066,-0.001z"></path></g></g>
+                        </svg>
+                    </a>
+                    <a href="#" class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,256,256">
+                            <g fill="#818a91" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g>
+                            </svg>
+                    </a>
+                    <a href="#" class="svg">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0,0,256,256">
+                            <g fill="#818a91" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M50.0625,10.4375c-1.84766,0.82031 -3.82812,1.37109 -5.91016,1.62109c2.125,-1.27344 3.75781,-3.28906 4.52344,-5.6875c-1.98437,1.17578 -4.19141,2.03125 -6.53125,2.49219c-1.875,-2 -4.54687,-3.24609 -7.50391,-3.24609c-5.67969,0 -10.28516,4.60156 -10.28516,10.28125c0,0.80469 0.09375,1.58984 0.26953,2.34375c-8.54687,-0.42969 -16.12109,-4.52344 -21.19531,-10.74609c-0.88672,1.52344 -1.39062,3.28906 -1.39062,5.17187c0,3.56641 1.8125,6.71484 4.57422,8.5625c-1.6875,-0.05469 -3.27344,-0.51953 -4.66016,-1.28906c0,0.04297 0,0.08594 0,0.12891c0,4.98438 3.54688,9.13672 8.24609,10.08594c-0.85937,0.23438 -1.76953,0.35938 -2.70703,0.35938c-0.66406,0 -1.30859,-0.0625 -1.9375,-0.1875c1.3125,4.08203 5.10938,7.0625 9.60547,7.14453c-3.51562,2.75781 -7.94922,4.39844 -12.76953,4.39844c-0.83203,0 -1.64844,-0.04687 -2.44922,-0.14453c4.54687,2.92188 9.95312,4.62109 15.76172,4.62109c18.91406,0 29.25781,-15.66797 29.25781,-29.25391c0,-0.44531 -0.01172,-0.89453 -0.02734,-1.33203c2.00781,-1.44922 3.75,-3.26172 5.12891,-5.32422z"></path></g></g>
+                            </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+<footer>
+    <section class="footer">
+        <div class="footer-background">
+            <p>Copyright © 2018 Wordpress Maikon. All Rights Reserved. | Theme design by
+                <a href="#" class="Zemez">Zemez</a>
+            </p>
+            <a href="#" class="tag">Privacy & Policy</a>
+            <a href="#" class="tag">FAQ</a>
+        </div>
+    </section>
+</footer>
 </html>
