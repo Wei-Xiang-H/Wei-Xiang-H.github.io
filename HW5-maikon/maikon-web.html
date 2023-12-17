@@ -249,20 +249,20 @@
             margin-top: 50px;
         }
         .data-background .data-item-group{
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             padding-bottom: 76px;
         }
         .data-background .data-item-group .item-num-group{
-            width: 50%;
             display: grid;
-            grid-template: 1fr 1fr/275px 275px;
+            grid-template: 1fr 1fr/1fr 1fr;
             gap: 30px;
-            padding: 10px;
+            padding: 50px 30px;
         }
         .item-num-group .item-num{
             background-color: #3f81ff;
             border-radius: 10px;
-            padding: 45px 30px;
+            padding: 35px 30px;
         }
         
         .item-num-group .item-num .title{
@@ -275,7 +275,6 @@
             font-weight: 400;
         }
         .data-background .data-item-group .item-txt{
-            width: 50%;
             padding: 30px 60px;
         }
         .data-background .data-item-group .item-txt h3{
