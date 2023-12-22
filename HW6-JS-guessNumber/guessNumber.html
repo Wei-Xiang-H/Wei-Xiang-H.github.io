@@ -7,11 +7,11 @@
     <title>猜數字遊戲</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <style>
-            #inputTxt::placeholder{
-                font-size: 13px;
-            }
-        </style>
+    <style>
+        #inputTxt::placeholder {
+            font-size: 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,19 +33,19 @@
         let minNum = 1;
         let randomNum = Math.floor(Math.random() * 99) + 1;
 
-        window.onload = function(){
+        window.onload = function () {
             setRange();
         }
-        let btnGuess=document.getElementById("guess");
-        btnGuess.addEventListener('click', function(){
+        let btnGuess = document.getElementById("guess");
+        btnGuess.addEventListener('click', function () {
             checkAns();
         });
-        let btnRe=document.getElementById("restart");
-        btnRe.addEventListener('click', function(){
+        let btnRe = document.getElementById("restart");
+        btnRe.addEventListener('click', function () {
             reset();
         });
-        let btnAns=document.getElementById("check");
-        btnAns.addEventListener('click', function(){
+        let btnAns = document.getElementById("check");
+        btnAns.addEventListener('click', function () {
             alert(`答案是:${randomNum}`);
             document.getElementById("inputTxt").value = "";
         });
@@ -63,27 +63,33 @@
         }
 
         function checkAns() {
-            let input = parseInt(Number (document.getElementById("inputTxt").value));
-            if (!isNaN(input)) {
-                if (input > maxNum || input < minNum) {
-                    alert("請檢查輸入範圍")
+            if (document.getElementById("inputTxt").value !== "") {
+                let input = parseInt(Number(document.getElementById("inputTxt").value));
+                if (!isNaN(input)) {
+                    if (input > maxNum || input < minNum) {
+                        alert("請檢查輸入範圍")
+                    }
+                    else if (input > randomNum) {
+                        maxNum = input;
+                    }
+                    else if (input < randomNum) {
+                        minNum = input;
+                    }
+                    else if (input == randomNum) {
+                        alert("恭喜答對");
+                        reset();
+                    }
                 }
-                else if (input > randomNum) {
-                    maxNum = input;
+                else {
+                    alert("請確認輸入內容")
                 }
-                else if (input < randomNum) {
-                    minNum = input;
-                }
-                else if (input == randomNum) {
-                    alert("恭喜答對");
-                    reset();
-                }
+                document.getElementById("inputTxt").value = "";
+                setRange();
             }
-            else {
+            else{
                 alert("請確認輸入內容")
             }
-            document.getElementById("inputTxt").value = "";
-            setRange();
+
         }
     </script>
 </body>
