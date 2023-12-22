@@ -5,20 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .step-group:nth-of-type(2){
-            background-color: red;
+        .g1,.g2{
+            display: flex;
         }
-        .step-group:nth-child(3){
-            background-color: blue;
+        .box, .box1{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 5px;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box1:nth-of-type(2){
+            background-color: red;
         }
     </style>
 </head>
 <body>
-    <div class="step-background">
-        <div class="step">a</div>
-        <div class="step-group">1</div>
-        <div class="step-group">2</div>
-        <div class="step-group">3</div>
+    <div class="g1">
+        <div class="box">a</div>
+        <div class="box1">1</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box1">2</div>
+        <div class="box">d</div>
+        <div class="box1">3</div>
+    </div>
+    <div class="g2">
+        <div class="box1">4</div>
+        <div class="box1">5</div>
     </div>
 </body>
 </html>
