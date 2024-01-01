@@ -75,6 +75,13 @@
             divab.classList.add("ex", "d-inline", "bg-secondary", "rounded", "me-2", "px-2");
             div.innerHTML = divab.outerHTML + inputArr.join('');
             document.body.append(div);
+            if (A == 4) {
+                div.classList.remove("bg-info");
+                div.classList.add("bg-danger");
+                divab.classList.remove("bg-secondary");
+                divab.classList.add("bg-info");
+                div.innerHTML = `${divab.outerHTML}答案是:${inputArr.join('')}`;
+            }
         }
 
         function check() {
@@ -101,11 +108,14 @@
                         b++;
                     }
                 }
-                if (a == 4) {
-                    alert(`恭喜答對 答案是${randomArr.join('')}`);
-                    enable();
-                }
                 history(a, b);
+                if (a == 4) {
+                    setTimeout(function () {
+                        alert(`恭喜答對 答案是${randomArr.join('')}`);
+                        enable();
+                    }, 100);
+                }
+
             }
             else {
                 alert("輸入錯誤");
