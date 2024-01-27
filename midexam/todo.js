@@ -1,7 +1,7 @@
 const inputText = document.querySelector("#input");
 const localStorageKey = "todoArrKey";
 let todoArr = [];
-let idNum = 0;
+let idNum = 0; //改成用時間或是直接讀取陣列最後一個id+1
 
 window.onload = function () {
     init();
@@ -18,18 +18,9 @@ let containerDiv = document.createElement("div");
 containerDiv.classList.add("container");
 document.body.append(containerDiv);
 
+//創建畫面時有obj參數  按鈕事件也創建好  所以可以直接obj抓到該物件
 //建立todo畫面
 function createDiv(obj) {
-    //初始化
-    // const container = document.querySelector(".container");
-    // if (container) {
-    //     container.innerHTML = "";
-    // }
-
-    //依照todoArr建立畫面
-    // for (let index = 0; index < todoArr.length; index++) {
-    //     const todoItem = todoArr[index].todo;}
-
 
     //建立外框div
     let borderDiv = document.createElement("div");
@@ -38,26 +29,12 @@ function createDiv(obj) {
     //建立input-group
     let inputGroup = document.createElement("div");
     inputGroup.classList.add("input-group", "my-3", "m-auto");
-    inputGroup.id = idNum;
+    inputGroup.id = obj.id;
 
     //建立input-checkbox
     let inputCheckbox = document.createElement("div");
     inputCheckbox.classList.add("input-group-text");
 
-    //建立checkbox
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = "";
-    checkbox.checked = todoArr.complete;
-    checkbox.setAttribute("aria-label", "Radio button for following text input");
-    checkbox.addEventListener("click", (e) => {
-        checkboxStatus(e);
-        if (checkbox.checked) {
-            input.classList.add("text-decoration-line-through");
-        } else {
-            input.classList.remove("text-decoration-line-through");
-        }
-    });
 
     //建立input
     let input = document.createElement("input");
@@ -66,6 +43,19 @@ function createDiv(obj) {
     input.setAttribute("aria-label", "Text input with radio button");
     input.disabled = true;
     input.value = obj.todo;
+
+    //建立checkbox
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = obj.complete;
+    checkbox.setAttribute("aria-label", "Radio button for following text input");
+    textDecoration(checkbox,input);
+    checkbox.addEventListener("click", (e) => {
+        checkboxStatus(e,obj);
+        textDecoration(checkbox,input);
+    });
+
+    
 
     //建立button編輯
     let btnEdit = document.createElement("button");
@@ -78,20 +68,19 @@ function createDiv(obj) {
         btnSave.classList.remove("d-none");
     });
 
-    //建立button保存
+    //建立button保存  (進方法前就排除空值)
     let btnSave = document.createElement("button");
     btnSave.classList.add("btn", "btn-success", "mx-1", "rounded", "d-none");
     btnSave.type = "button";
     btnSave.innerText = "保存";
     btnSave.addEventListener("click", (e) => {
         //沒輸入內容無法保存
-        if(saveButton(e)){
+        if(e.target.parentNode.querySelector(".form-control").value.trim() !==""){
+            saveButton(e,obj);
             input.disabled = true;
             btnEdit.classList.remove("d-none");
             btnSave.classList.add("d-none");
-            console.log("改變成功");
         }
-        
     });
 
     //建立button刪除
@@ -100,7 +89,7 @@ function createDiv(obj) {
     btnDel.type = "button";
     btnDel.innerText = "刪除";
     btnDel.addEventListener("click", (e) => {
-        deleteButton(e)
+        deleteButton(e,obj)
     })
 
     //append
@@ -108,9 +97,6 @@ function createDiv(obj) {
     inputGroup.append(inputCheckbox, input, btnEdit, btnSave, btnDel);
     borderDiv.append(inputGroup);
     containerDiv.append(borderDiv);
-
-    //畫面產生再+1
-    idNum++;
 }
 
 //初始化
@@ -125,11 +111,8 @@ function init() {
         container.innerHTML = "";
     }
     //依照舊有的localstorage資料 重新建立畫面
-    //更改localstorage舊的id  讓他跟新建畫面的id相同
     todoArr.forEach(obj => {
         createDiv(obj);
-        //方法跑完idNum會+1  所以-1才會相同
-        obj.id = idNum - 1;
         resetStorage();
     })
 }
@@ -146,6 +129,10 @@ function addInput() {
             "complete": false,
             "id": idNum,
         };
+        //如果todoArr中有物件,就將obj的id改成最後一個物件的id+1
+        if(todoArr.length !== 0){
+            obj.id = todoArr[todoArr.length-1].id+1
+        }
         todoArr.push(obj);
         inputText.value = "";
         resetStorage();
@@ -156,43 +143,35 @@ function addInput() {
 }
 
 //checkbox事件
-function checkboxStatus(e) {
-    let todoDataID = e.target.parentNode.parentNode.id;
-    todoArr.forEach(item => {
-        if (todoDataID == item.id) {
-            item.complete = e.target.checked;
-        }
-    });
+function checkboxStatus(e,obj) {
+    obj.complete = e.target.checked;
     resetStorage();
+}
+//text裝飾事件
+function textDecoration(checkbox,input){
+    if (checkbox.checked) {
+        input.classList.add("text-decoration-line-through");
+    } else {
+        input.classList.remove("text-decoration-line-through");
+    }
 }
 
 //saveButton事件
-function saveButton(e) {
-    let todoDataID = e.target.parentNode.id;
+function saveButton(e,obj) {
     let editText = e.target.parentNode.querySelector(".form-control");
-    //成功抓到才返回true
-    let bool =todoArr.find(item => {
-        if (todoDataID == item.id && editText.value.trim() !== "") {
-            item.todo = editText.value;
-            console.log(true);
-            resetStorage();
-            return true;
-        }
-    })
-    return bool;
+    obj.todo = editText.value;
+    resetStorage();
 }
 
 //deleteButton事件
-function deleteButton(e) {
-    let todoDataID = e.target.parentNode.id;
-    todoArr.forEach((item, idx) => {
-        if (todoDataID == item.id) {
-            todoArr.splice(idx, 1);
-            let delDiv = e.target.parentNode.parentNode;
-            delDiv.remove();
-        }
-    });
-    resetStorage();
+function deleteButton(e,obj) {
+    let index = todoArr.indexOf(obj);
+    let delDiv = e.target.parentNode.parentNode;
+    if(index !== -1){
+        todoArr.splice(index, 1);
+        delDiv.remove();
+        resetStorage();
+    }
 }
 
 //將資料存進localStorage
