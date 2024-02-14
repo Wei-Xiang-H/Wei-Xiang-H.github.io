@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+}
+/* ------------------------------------------ */
+#menu-switch {
+    display: none;
+}
+
+header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: #fff;
+}
+
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2.5px 5px 0px rgb(228, 228, 228);
+}
+
+.header .logo-area {
+    display: flex;
+}
+
+.header .logo-image {
+    width: 160px;
+    align-self: center;
+}
+
+.header .logo-image img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.nav {
+    background-color: #fff;
+}
+
+.nav a {
+    color: #4a4a4a;
+    padding: 20px;
+    display: block;
+    padding: 10px 20px;
+}
+
+.nav-menu .faq {
+    position: absolute;
+    display: none;
+    width: 600px;
+    top: 80%;
+    right: 5%;
+}
+
+.faq-content {
+    margin-top: 20px;
+    box-shadow: 0px 0px 2px 0px #4a4a4a;
+    border-radius: 5px;
+}
+
+.faq .gotoQa {
+    padding: 20px 0px 20px 10px;
+    border-bottom: 1px solid #d1d1d1;
+    background-color: #f6f6f6;
+}
+
+.faq .gotoQa a {
+    width: 160px;
+    padding: 10px 10px 10px 10px;
+}
+
+.faq .gotoQa a:after {
+    content: "➤";
+    display: inline-block;
+    width: 11px;
+    height: 18px;
+    margin: 0 0 -4px 5px;
+}
+
+.faq .qa-wrap {
+    overflow-y: scroll;
+    max-height: 500px;
+    background: #f6f6f6;
+}
+
+.faq h4 {
+    margin: 30px 20px;
+}
+
+.faq a {
+    display: inline;
+    padding: 0px;
+}
+
+.faq article {
+    margin: 0 0 20px 0;
+}
+
+.faq details {
+    border-bottom: 1px solid #d1d1d1;
+    padding: 0 10px 10px 20px;
+}
+
+.faq summary {
+    margin-top: 16px;
+}
+
+.faq summary {
+    cursor: pointer;
+}
+
+.faq summary p {
+    display: inline-block;
+    line-height: 1.5em;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+@media screen and (max-width:1023px) {
+    .logo-area p {
+        display: none;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hamburger span {
+        width: 80%;
+        height: 2px;
+        margin: 3px;
+        background-color: #4a4a4a;
+    }
+
+    #menu-switch:checked+.header {
+        box-shadow: 0px 0px 0px 0px;
+    }
+
+    #menu-switch:checked+.header .hamburger span:first-child {
+        display: none;
+    }
+
+    #menu-switch:checked+.header .hamburger span:nth-child(2) {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        rotate: 45deg;
+    }
+
+    #menu-switch:checked+.header .hamburger span:nth-child(3) {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        rotate: -45deg;
+    }
+
+    .nav {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    #menu-switch:checked+.header .nav {
+        opacity: 1;
+        left: 0;
+        box-shadow: 0px 2.5px 5px 0px rgb(228, 228, 228);
+    }
+
+    .nav a {
+        display: block;
+        flex-grow: 1;
+    }
+
+    .nav .nav-menu {
+        width: 100%;
+    }
+
+    .nav .nav-menu li {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 10px 0px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .logo-area p {
+        padding-left: 10px;
+        align-self: flex-end;
+        color: #9f9f9f;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav {
+        align-self: center;
+        margin-right: 50px;
+    }
+
+    .nav .nav-menu {
+        display: flex;
+    }
+
+    .faqBtn:hover .faq {
+        display: block;
+    }
+
+}

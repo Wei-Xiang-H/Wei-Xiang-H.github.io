@@ -1,0 +1,415 @@
+.color4a {
+    color: #4a4a4a;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.modalOpen {
+    overflow: hidden;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+}
+
+@media screen and (min-width:1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .productImgGroup .imgMain {
+        width: 100%;
+    }
+
+    .productImgGroup .imgSec,
+    .productPrice, .none1024{
+        display: none;
+    }
+
+    .row .productPriceFooter {
+        display: flex;
+    }
+
+    .locationGroup .locationTxt,
+    .productContent .payRelated {
+        display: block;
+    }
+
+}
+
+/* -------productImgGroup----- */
+.productImgGroup {
+    display: flex;
+    height: 500px;
+    gap: 20px;
+}
+
+.imgMain {
+    width: 60%;
+    height: 100%;
+}
+
+.imgSec {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.productImg {
+    width: 100%;
+    height: 100%;
+}
+
+.imgSec .img50 {
+    height: calc(50% - 10px);
+}
+
+#imgCarousel {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 70%;
+    max-width: 750px;
+    background-color: white;
+    padding: 30px;
+    display: none;
+}
+
+/* ----------productContent----------- */
+.productContent {
+    width: 66.66%;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.location {
+    display: flex;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.location img {
+    height: 18px;
+    width: 11px;
+    padding-bottom: 5px;
+}
+
+.placeInfoItem img {
+    width: 20px;
+    height: 20px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+}
+
+.device_service {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ---------- */
+#deviceModal {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: none;
+    max-height: calc(100vh - 30px);
+    width: 500px;
+    background-color: white;
+    overflow-y:auto;
+}
+
+#deviceModal::-webkit-scrollbar {
+    display: none;
+}
+
+.deviceModalHeader {
+    align-items: flex-start;
+}
+
+.deviceModalHeader img {
+    cursor: pointer;
+}
+
+.deviceItem {
+    margin-bottom: 16px;
+    align-items: flex-start;
+}
+
+.deviceItem img {
+    margin: 8px 8px 0 0;
+}
+
+.deviceItem p {
+    margin-bottom: 0;
+}
+
+.notProvided p {
+    width: 33%;
+    color: #9b9b9b;
+    text-decoration: line-through;
+    letter-spacing: 0.8px;
+}
+
+.productContent button {
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #4a4a4a;
+}
+
+.productContent button:hover {
+    color: white;
+    background-color: #53A385;
+    border: 1px solid #53A385;
+    transition: 0.4s;
+}
+.celenderGroup{
+    justify-content: space-around;
+}
+.celender {
+    width: 315px;
+}
+
+.vertical-line{
+    border-left: 1px solid #efefef;
+}
+.celenderHeader{
+    width: 315px;
+}
+.weekday-area>* {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.date-area1>*,.date-area2>* {
+    height: 45px;
+    cursor: pointer;
+}
+
+.row-cols-7>* {
+    flex: 0 0 auto;
+    width: 45px;
+}
+
+#lBtn1 ,#lBtn2{
+    height: 30px;
+    width: 29px;
+    cursor: pointer;
+    background-image: url("./images/leftArrow.svg");
+}
+
+#lBtn1:hover ,#lBtn2:hover {
+    background-image: url("./images/left-arrow-hover.svg");
+}
+
+#rBtn1,#rBtn2 {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    background-image: url("./images/rightArrow.svg");
+}
+
+#rBtn1:hover,#rBtn2:hover {
+    background-image: url("./images/right-arrow-hover.svg");
+}
+
+.date {
+    border: 1px solid #cce4db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dateHover:hover {
+    background-color: #cce4db;
+    transition: 0.2s;
+}
+
+.clenderMaker::before{
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+    margin-right: 3px;
+    border-radius: 3px;
+    background-color: #cce4db;
+    content: "";
+}
+
+
+.locationTxt {
+    display: flex;
+}
+
+.locationBlock {
+    width: 50%;
+}
+
+
+
+
+.owner h5 {
+    font-size: 16px;
+}
+
+.owner p {
+    font-size: 13px;
+    letter-spacing: 0.65px;
+    color: #9b9b9b;
+    font-weight: 400;
+}
+
+.owner img {
+    width: 60px;
+    height: 60px;
+}
+
+
+.payRelated {
+    display: flex;
+}
+
+.payRelated div {
+    width: 50%;
+}
+
+.payRelated .paymentInfo span {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    color: #9b9b9b;
+}
+
+
+/* ---------------productPrice--------------- */
+.priceInfo {
+    display: flex;
+}
+
+.reserved,
+.priceInfo {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px 5px 0 0;
+    padding: 20px 20px;
+}
+.reserved{
+    border-top: 0;
+    border-radius:  0 0 5px 5px;
+}
+
+
+.hrPrice,
+.timeSlotPrice {
+    width: 100%;
+    padding-left: 5px;
+}
+
+.reserved {
+    width: 100%;
+}
+
+.reserved a {
+    width: 100%;
+    color: white;
+    background-color: #53A385;
+    border-radius: 50rem;
+}
+
+.reserved a:hover {
+    background-color: #568A71;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+/* -----------recommendMayLike--------------- */
+.mayLikeTitle {
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+.mayLikeProduct {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.mayLikeProduct a {
+    max-width: 220px;
+}
+
+.mayLikeProduct img {
+    width: 100%;
+    height: 160px;
+}
+
+.mayLikeProduct a:hover img {
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.mayLikeProduct a p:nth-child(2) {
+    letter-spacing: 0.8px;
+}
+
+.mayLikeProduct a p:last-child {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+
+/* --------productPriceFooter----------- */
+.productPriceFooter {
+    position: fixed;
+    display: none;
+    width: 100%;
+    background-color: white;
+}
+
+.productPriceFooter .btn {
+    width: 110px;
+    color: white;
+    background-color: #53A385;
+}
+
+.priceFooterBtn:hover {
+    color: white;
+    background-color: #568A71;
+}
+
+.priceFooterInfo a {
+    color: #53A385;
+    font-size: 14px;
+}
