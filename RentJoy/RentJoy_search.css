@@ -3,11 +3,8 @@ body {
     min-height: 100%;
     background-color: #fff;
 }
-@media screen and (min-width:1400px){
-    .container{
-        max-width:  1140px;
-    }
-}
+
+
 /* -------searchNavbar------------- */
 #searchNavbar{
     background-color: white;
@@ -74,7 +71,7 @@ svg{
     font-size: 22px;
     color: #565a5c;
     line-height: 24px;
-    margin: 20px 0 7px;
+    margin: 15px 0 7px;
 }
 .productInfoGroup .productName:hover{
     text-decoration: underline;
@@ -102,7 +99,6 @@ svg{
 
 .productPrice{
     width: 30%;
-    height: 36px;
     display: flex;
     justify-content: center;
 }
@@ -134,4 +130,18 @@ svg{
 .pagination li a,.pagination li a:hover{
     color:#F08646 ;
     font-size: 14px;
+}
+
+
+/* --------------RWD----------- */
+@media screen and (min-width:1400px){
+    .container{
+        max-width:  1140px;
+    }
+}
+@media screen and (max-width:768px){
+    .productImg{
+        height: 200px;
+        margin-top: 25px;
+    }
 }
