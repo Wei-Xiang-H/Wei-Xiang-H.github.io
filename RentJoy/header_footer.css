@@ -18,6 +18,10 @@ header .logo-area {
     display: flex;
 }
 
+.logo-area p span {
+    margin: 0 5px;
+}
+
 header .logo-image {
     width: 160px;
 }
@@ -96,8 +100,18 @@ header .logo-image img {
 }
 
 .faq summary {
-    margin-top: 16px;
+    margin: 16px 0 5px 0;
     cursor: pointer;
+}
+
+.faq summary::before {
+    content: '';
+    display: inline-block;
+    background-image: url(./images/question_icon.png);
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
 }
 
 .faq summary p {
@@ -106,6 +120,155 @@ header .logo-image img {
     line-height: 1.5em;
     vertical-align: top;
 }
+
+/* ------------------------------------------ */
+/* modal */
+
+    #loginModal .modal-dialog,
+    #signUpDetailModal .modal-dialog {
+        width: 360px;
+    }
+
+    .modal-content {
+        padding: 40px 30px 35px 30px;
+    }
+
+    .btn-close {
+        top: 2%;
+        right: 2%;
+        padding: 18px;
+    }
+
+    .modal-header {
+        display: block;
+        border-bottom: none;
+        padding: 0;
+        margin: 5px 0 15px 0;
+        text-align: center;
+    }
+
+    .modal-title,
+    .input-group,
+    .row {
+        margin-bottom: 10px;
+    }
+
+    .modal-text .register {
+        color: #53a385;
+        border-bottom: 1px solid;
+    }
+
+    #loginModal .modal-body {
+        padding: 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    .googleLogin,
+    .facebookLogin {
+        display: flex;
+        border-radius: 25px;
+        padding: 6px 20px;
+        border: 1px solid gray;
+        margin-bottom: 20px;
+    }
+
+    .googleLogin p,
+    .facebookLogin p {
+        text-align: center;
+        flex-grow: 1;
+        vertical-align: bottom;
+        margin-bottom: 0;
+        align-self: center;
+        color: #4a4a4a;
+    }
+
+    .email-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #9b9b9b;
+        padding: 15px 0;
+    }
+
+    .email-text::before,
+    .email-text::after {
+        content: "";
+        flex: 1;
+        border-bottom: 1px solid #D8D8D8;
+    }
+
+    .email-text::before {
+        margin-right: 25px;
+    }
+
+    .email-text::after {
+        margin-left: 25px;
+    }
+
+    .input-group input {
+        height: 46px;
+        border: 1px solid #9b9b9b;
+        
+    }
+
+    .input-group input::placeholder {
+        color: #9b9b9b;
+        font-size: 18px;
+    }
+
+    .remember {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .remember .checkbox-area input[type="checkbox"]{
+        cursor: pointer;
+        transform: scale(1.5);
+    }
+
+    .remember .checkbox-area label {
+        cursor: pointer;
+        text-align: center;
+        padding-left: 10px;
+    }
+
+    .remember a,
+    .modal-footer-content a {
+        color: #53a385;
+    }
+
+    .modal-body .SignInErrorMessage {
+        display: block;
+    }
+    .modal-body .SignInErrorMessage::before {
+        content: "！";
+    }
+
+    .loginBtn,
+    .forgetpasswordBtn,
+    .signupBtn,
+    .signupDetailBtn {
+        width: 100%;
+        background-color: #53a385;
+        color: #fff;
+        padding: 15px 60px;
+        border-radius: 25px;
+        border: 1px solid #53a385;
+        margin-top: 10px;
+    }
+
+    .modal-footer-login {
+        padding-top: 20px;
+    }
+
+    .modal-footer-content {
+        margin-left: 20px;
+    }
+
+    
 /* ------------------------------------------ */
 /* footer */
 footer {
@@ -133,6 +296,11 @@ footer {
     margin: 0 30px;
     padding-bottom: 30px;
 }
+
+.footer-row img {
+    vertical-align: top;
+}
+
 .footer-row li {
     margin-top: 5px;
 }

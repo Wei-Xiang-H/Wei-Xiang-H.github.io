@@ -21,32 +21,7 @@
     z-index: 90;
 }
 
-@media screen and (min-width:1400px) {
-    .container {
-        max-width: 1140px;
-    }
-}
 
-@media screen and (max-width:1024px) {
-    .productImgGroup .imgMain {
-        width: 100%;
-    }
-
-    .productImgGroup .imgSec,
-    .productPrice {
-        display: none;
-    }
-
-    .row .productPriceFooter {
-        display: flex;
-    }
-
-    .locationGroup .locationTxt,
-    .productContent .payRelated {
-        display: block;
-    }
-
-}
 
 /* -------productImgGroup----- */
 .productImgGroup {
@@ -277,6 +252,10 @@ h5 {
 
 
 /* -----------recommendMayLike--------------- */
+
+.recommendMayLike{
+    margin-bottom: 24px;
+}
 .mayLikeTitle {
     font-weight: 600;
     letter-spacing: 0.8px;
@@ -334,4 +313,42 @@ h5 {
 .priceFooterInfo a {
     color: #53A385;
     font-size: 14px;
+}
+
+
+/* ---------------RWD----------------- */
+
+@media screen and (min-width:1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .productImgGroup .imgMain ,.productContent,.locationBlock,.payRelated div{
+        width: 100%;
+    }
+    footer{
+        display: none;
+    }
+    .productImgGroup .imgSec,
+    .productPrice {
+        display: none;
+    }
+
+    .row .productPriceFooter {
+        display: flex;
+    }
+
+    .locationGroup .locationTxt,
+    .productContent .payRelated {
+        display: block;
+    }
+    .placeInfo ,.mayLikeProduct {
+        justify-content: space-around;
+    }
+    .recommendMayLike {
+        margin-bottom: 90px;
+    }
+
 }
