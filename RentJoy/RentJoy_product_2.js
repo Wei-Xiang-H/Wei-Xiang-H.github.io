@@ -23,12 +23,21 @@ $("#carouselClose").click(function () {
 })
 
 $('#selectDate').click(function () {
-    $(".reservedCelender").css("display", "flex");
+    $(".reservedCalender").css("display", "flex");
 })
 
+$('#footerSelectDate').click(function () {
+    $(".footerReservedCalender").css("display", "flex");
+})
 
 $(document).on('click', function (event) {
-    if (!$(event.target).is('#selectDate') && (!$(event.target).closest('.reservedCelender').length || $(event.target).is('.dateHover'))) {
-        $('.reservedCelender').hide();
+    if (!$(event.target).is('#selectDate') && (!$(event.target).closest('.reservedCalender').length || $(event.target).is('.dateHover'))) {
+        $('.reservedCalender').hide();
+    }
+})
+
+$(document).on('click', function (event) {
+    if (!$(event.target).is('#footerSelectDate') && (!$(event.target).closest('.footerReservedCalender').length || $(event.target).is('.dateHover'))) {
+        $('.footerReservedCalender ').hide();
     }
 })

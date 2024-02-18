@@ -1,7 +1,9 @@
 const lastMonthBtn = document.querySelectorAll(".last-month-btn");
 const reservedLastMonthBtn = document.querySelector("#lBtn3");
+const footerReservedLastMonthBtn = document.querySelector("#lBtn4");
 const nextMonthBtn = document.querySelectorAll(".next-month-btn");
 const reservedNextMonthBtn = document.querySelector("#rBtn3");
+const footerReservedNextMonthBtn = document.querySelector("#rBtn4");
 const dateInput = document.querySelector("#selectDate");
 
 
@@ -15,7 +17,6 @@ let nextMonth;
 
 window.onload = function(){
     initCalendar();
-    
 }
 
 
@@ -47,6 +48,16 @@ reservedLastMonthBtn.addEventListener("click", () => {
     renderingCalendar(currentYear, currentMonth, ".date-area3");
 })
 
+footerReservedLastMonthBtn.addEventListener("click", () => {
+    currentMonth--;
+    if (currentMonth < 1) {
+        currentYear--;
+        currentMonth = 12;
+    }
+    showTitle(currentYear, currentMonth,".date-title4");
+    renderingCalendar(currentYear, currentMonth, ".date-area4");
+})
+
 nextMonthBtn.forEach(mon=>{
     mon.addEventListener("click", () => {
         currentMonth++;
@@ -71,6 +82,16 @@ reservedNextMonthBtn.addEventListener("click", () => {
     }
     showTitle(currentYear, currentMonth,".date-title3");
     renderingCalendar(currentYear, currentMonth, ".date-area3");
+});
+
+footerReservedNextMonthBtn.addEventListener("click", () => {
+    currentMonth++;
+    if (currentMonth > 12) {
+        currentYear++;
+        currentMonth = 1;
+    }
+    showTitle(currentYear, currentMonth,".date-title4");
+    renderingCalendar(currentYear, currentMonth, ".date-area4");
 });
 
 function renderingCalendar(year, month, dateAreaSelector) {
@@ -103,15 +124,14 @@ function renderingCalendar(year, month, dateAreaSelector) {
 
         dateDom.append(dateEl);
         dateArea.append(dateDom.cloneNode(true));
-        setDateStr();
     }
 }
 
 
-function setDateStr(){
-    $(".reservedCelender .dateHover").click(function(e){
+function setDateStr(targetDate,showDate){
+    $(targetDate).click(function(e){
         // console.log("點到了");
-        $("#selectDate").text(`${currentYear} / ${currentMonth.toString().padStart(2, 0)}/${e.target.textContent.padStart(2, 0)}`);
+        $(showDate).text(`${currentYear} / ${currentMonth.toString().padStart(2, 0)}/${e.target.textContent.padStart(2, 0)}`);
     })
 }
 
@@ -134,6 +154,10 @@ function initCalendar() {
     renderingCalendar(nextYear, nextMonth, ".date-area2");
     showTitle(currentYear, currentMonth,".date-title3");
     renderingCalendar(currentYear, currentMonth, ".date-area3");
+    showTitle(currentYear, currentMonth,".date-title4");
+    renderingCalendar(currentYear, currentMonth, ".date-area4");
+    setDateStr(".reservedCelender .dateHover","#selectDate");
+    setDateStr(".footerReservedCalender .dateHover","#footerSelectDate");
 }
 
 function showTitle(year, month,titleSelector) {

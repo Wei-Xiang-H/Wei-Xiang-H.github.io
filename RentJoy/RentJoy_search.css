@@ -80,6 +80,9 @@ svg {
     color: #565a5c;
     line-height: 24px;
     margin: 15px 0 7px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .productInfoGroup .productName:hover {
@@ -97,7 +100,6 @@ svg {
 }
 
 .productIcon {
-    margin-right: 10px;
     font-size: 14px;
     line-height: 20px;
     color: #8a4705;
@@ -111,17 +113,15 @@ svg {
 
 .mb5 {
     white-space: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.productPrice {
-    display: flex;
-    justify-content: center;
-}
+
 
 .btnPrice {
     background-color: #F08646;
     color: white;
+    margin-left: 10px;
 }
 
 .btnPrice:hover {
@@ -163,13 +163,30 @@ svg {
 }
 
 @media screen and (max-width:768px) {
-    .productImg {
-        height: 200px;
-        margin-top: 25px;
+    .productImga{
+        width: 100%;
     }
-
+    .searchProduct {
+        flex-direction: column;
+    }
+    .productInfoGroup {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .productSpec,.productTags{
+        margin-bottom: 10px;
+    }
     .mb5 {
         display: flex;
+        flex-direction: column;
+    }
+    .btnPrice {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:375px){
+    .productSpecGroup {
         flex-direction: column;
     }
 }
