@@ -131,7 +131,14 @@ function renderingCalendar(year, month, dateAreaSelector) {
 function setDateStr(targetDate,showDate){
     $(targetDate).click(function(e){
         // console.log("點到了");
-        $(showDate).text(`${currentYear} / ${currentMonth.toString().padStart(2, 0)}/${e.target.textContent.padStart(2, 0)}`);
+        $(showDate).text(`${currentYear} / ${currentMonth.toString().padStart(2, 0)} / ${e.target.textContent.padStart(2, 0)}`);
+    })
+}
+
+function setNextMonDateStr(targetDate,showDate){
+    $(targetDate).click(function(e){
+        // console.log("點到了");
+        $(showDate).text(`${nextYear} / ${nextMonth.toString().padStart(2, 0)} / ${e.target.textContent.padStart(2, 0)}`);
     })
 }
 
@@ -156,7 +163,8 @@ function initCalendar() {
     renderingCalendar(currentYear, currentMonth, ".date-area3");
     showTitle(currentYear, currentMonth,".date-title4");
     renderingCalendar(currentYear, currentMonth, ".date-area4");
-    setDateStr(".reservedCelender .dateHover","#selectDate");
+    setDateStr(".currDateGroup .dateHover","#selectDate");
+    setNextMonDateStr(".nextDateGroup .dateHover","#selectDate");
     setDateStr(".footerReservedCalender .dateHover","#footerSelectDate");
 }
 
