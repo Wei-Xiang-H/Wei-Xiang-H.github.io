@@ -523,7 +523,9 @@ h5 {
 #footerCalenderModal .modal-content{
     padding-top: 20px;
 }
-
+#footerCalenderModal .modal-header{
+    margin-bottom: 0;
+}
 
 /* -----------------RWD---------------------- */
 @media screen and (min-width:1400px) {
