@@ -522,6 +522,7 @@ h5 {
 }
 #footerCalenderModal .modal-content{
     padding-top: 20px;
+    margin-top: 50px;
 }
 #footerCalenderModal .modal-header{
     margin-bottom: 0;
