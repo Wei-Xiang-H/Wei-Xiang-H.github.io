@@ -168,8 +168,8 @@ h5 {
 
 .productContent button:hover {
     color: white;
-    background-color: #53A385;
-    border: 1px solid #53A385;
+    background-color: #53a385;
+    border: 1px solid #53a385;
     transition: 0.4s;
 }
 .calenderGroup{
@@ -337,11 +337,9 @@ h5 {
     justify-content: center;
 }
 
-.reserved,
-.priceInfo {
+.reserved,.priceInfo {
     border: 1px solid #d8d8d8;
     border-radius: 5px 5px 0 0;
-    padding: 20px 20px;
 }
 .reserved{
     border-top: 0;
@@ -349,10 +347,8 @@ h5 {
 }
 
 
-.hrPrice,
-.timeSlotPrice {
+.hrPrice,.timeSlotPrice {
     width: 100%;
-    padding-left: 5px;
 }
 
 .reserved {
@@ -362,7 +358,7 @@ h5 {
 .reserved a {
     width: 100%;
     color: white;
-    background-color: #53A385;
+    background-color: #53a385;
     border-radius: 50rem;
 }
 
@@ -371,10 +367,92 @@ h5 {
     color: white;
 }
 
+.time{
+    display: none;
+}
+
+.time .dropdown .btn{
+    font-size: 16px ;
+}
+
+.dropdown > button:first-child::before,.timePeriod::before{
+    content: "";
+    display: block;
+    background: url(/images/timepicker-icon.svg);
+    width: 15px;
+    height: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5px;
+}
+
+.dropdown .start:active,.dropdown .end:active{
+    border: 0;
+}
+.dropdown > button.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+.dropdown .start::after,.dropdown .end::after{
+    display: none;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 
 
-
-
+.timePeriodGroup{
+    display: none;
+}
+.timePeriodGroup button{
+    border-color: #d8d8d8;
+}
+.timePeriodGroup button::before{
+    content: "";
+    background: url(./images/select-icon.svg) no-repeat;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.timePeriodGroup button:hover{
+    background-color: #f6f6f6;
+    border-color: #f6f6f6;
+    color: #4a4a4a;
+}
+.timePeriodGroup button:hover::before{
+    background: url(./images/select-hover-icon.svg) no-repeat;
+}
+.timePeriodGroup .btnClick,
+.timePeriodGroup .btnClick:hover,
+.timePeriodGroup .btn:active{
+    color: white;
+    background-color: #53a385;
+    border-color: #53a385;
+}
+.timePeriodGroup .btnClick::before{
+    background: url(./images/select-checked-icon.svg) no-repeat;
+}
+.timePeriodGroup .btnClick:hover::before{
+    background: url(./images/select-checked-hover-icon.svg) no-repeat;
+}
+.productPriceDetails{
+    color: #979797;
+    display: none;
+}
+.productPriceDetails .largeTxt{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    vertical-align: middle;
+    color: #4a4a4a;
+}
 
 
 
@@ -430,7 +508,7 @@ h5 {
 .productPriceFooter .btn {
     width: 110px;
     color: white;
-    background-color: #53A385;
+    background-color: #53a385;
 }
 
 .priceFooterBtn:hover {
@@ -439,10 +517,12 @@ h5 {
 }
 
 .priceFooterInfo a {
-    color: #53A385;
+    color: #53a385;
     font-size: 14px;
 }
-
+#footerCalenderModal .modal-content{
+    padding-top: 20px;
+}
 
 
 /* -----------------RWD---------------------- */
