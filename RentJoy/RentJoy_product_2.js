@@ -150,7 +150,13 @@ $(".footerProductPrice .timePeriodGroup button").click(function(){
     showReservedDetails(this,".footerProductPrice");
 })
 
+$(".startTime ul button").click(function() {
+    $(".startTime .dropdown-toggle").text($(this).text());
+});
 
+$(".endTime ul button").click(function() {
+    $(".endTime .dropdown-toggle").text($(this).text());
+});
 
 
 

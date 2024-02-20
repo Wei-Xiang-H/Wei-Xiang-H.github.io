@@ -383,7 +383,7 @@ h5 {
     height: 15px;
     margin-top: auto;
     margin-bottom: auto;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .dropdown .start:active,.dropdown .end:active{
@@ -523,6 +523,7 @@ h5 {
 #footerCalenderModal .modal-content{
     padding-top: 20px;
     margin-top: 50px;
+    max-width: 500px;
 }
 #footerCalenderModal .modal-header{
     margin-bottom: 0;
@@ -577,13 +578,23 @@ h5 {
     .container{
         padding: 30px;
     }
+    #footerCalenderModal .modal-content{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
-
+@media screen and (max-width:450px){
+    .arrow{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
 @media screen and (max-width:425px){
     #footerCalenderModal .modal-content{
         padding: 5px;
     }
     #footerCalenderModal .modal-header{
-        margin-right: 5px;
+        margin-right: 10px;
+        margin-top: 10px;
     }
 }
