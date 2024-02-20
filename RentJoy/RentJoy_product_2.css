@@ -378,7 +378,7 @@ h5 {
 .dropdown > button:first-child::before,.timePeriod::before{
     content: "";
     display: block;
-    background: url(/images/timepicker-icon.svg);
+    background: url(./images/timepicker-icon.svg);
     width: 15px;
     height: 15px;
     margin-top: auto;
