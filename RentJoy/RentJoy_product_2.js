@@ -171,7 +171,7 @@ function initCalendar() {
     setDateStr(".currDateGroup .dateHover","#selectDate");
     setNextMonDateStr(".nextDateGroup .dateHover","#selectDate");
     setDateStr(".footerReservedCalender .dateHover","#footerSelectDate");
-    showSelectTime(".reservedCalender .dateHover",".productPrice");
+    showSelectTime(".bodyCalender .dateHover",".productPrice");
     showSelectTime(".footerReservedCalender .dateHover",".footerProductPrice");
 }
 
@@ -239,14 +239,16 @@ function showTitle(year, month,titleSelector) {
 
 function showSelectTime(target,father){
     $(target).click(function(){
-        $(`${father} .timePeriodGroup`).toggle();
+        $(`${father} .timePeriodGroup`).show();
         $(`${father} .time`).css("display", "flex");
     });
 }
 
 function showReservedDetails(target,father){
-    if($(target).hasClass("btnClick")){
+    if($(target).parent().children().hasClass("btnClick")){
         $(`${father} .productPriceDetails`).show();
+    }else{
+        $(`${father} .productPriceDetails`).hide();
     }
 }
 
