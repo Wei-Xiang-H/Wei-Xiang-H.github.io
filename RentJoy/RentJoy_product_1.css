@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.modalOpen {
+.modal-open {
     overflow: hidden;
 }
 
@@ -24,18 +24,18 @@
 
 
 /* -------productImgGroup----- */
-.productImgGroup {
+.product-img-group {
     display: flex;
     height: 500px;
     gap: 20px;
 }
 
-.imgMain {
+.img-main {
     width: 60%;
     height: 100%;
 }
 
-.imgSec {
+.img-sec {
     width: 40%;
     height: 100%;
     display: flex;
@@ -43,12 +43,12 @@
     gap: 20px;
 }
 
-.productImg {
+.product-img {
     width: 100%;
     height: 100%;
 }
 
-.imgSec .img50 {
+.img-sec .img50 {
     height: calc(50% - 10px);
 }
 
@@ -66,7 +66,7 @@
 }
 
 /* ----------productContent----------- */
-.productContent {
+.product-content {
     width: 66.66%;
 }
 
@@ -88,7 +88,7 @@ h2 {
     padding-bottom: 5px;
 }
 
-.placeInfoItem img {
+.place-info-item img {
     width: 20px;
     height: 20px;
 }
@@ -99,7 +99,7 @@ h5 {
     letter-spacing: 0.9px;
 }
 
-.device_service {
+.device-service {
     display: flex;
     flex-wrap: wrap;
 }
@@ -123,41 +123,41 @@ h5 {
     display: none;
 }
 
-.deviceModalHeader {
+.device-modal-header {
     align-items: flex-start;
 }
 
-.deviceModalHeader img {
+.device-modal-header img {
     cursor: pointer;
 }
 
-.deviceItem {
+.device-item {
     margin-bottom: 16px;
     align-items: flex-start;
 }
 
-.deviceItem img {
+.device-item img {
     margin: 8px 8px 0 0;
 }
 
-.deviceItem p {
+.device-item p {
     margin-bottom: 0;
 }
 
-.notProvided p {
+.not-provided p {
     width: 33%;
     color: #9b9b9b;
     text-decoration: line-through;
     letter-spacing: 0.8px;
 }
 
-.productContent button {
+.product-content button {
     font-size: 14px;
     background-color: white;
     border: 1px solid #4a4a4a;
 }
 
-.productContent button:hover {
+.product-content button:hover {
     color: white;
     background-color: #53A385;
     border: 1px solid #53A385;
@@ -165,11 +165,11 @@ h5 {
 }
 
 
-.locationTxt {
+.location-txt {
     display: flex;
 }
 
-.locationBlock {
+.location-block {
     width: 50%;
 }
 
@@ -193,15 +193,15 @@ h5 {
 }
 
 
-.payRelated {
+.pay-related {
     display: flex;
 }
 
-.payRelated div {
+.pay-related div {
     width: 50%;
 }
 
-.payRelated .paymentInfo span {
+.pay-related .payment-info span {
     font-size: 14px;
     letter-spacing: 0.7px;
     color: #9b9b9b;
@@ -209,20 +209,20 @@ h5 {
 
 
 /* ---------------productPrice--------------- */
-.priceInfo {
+.price-info {
     display: flex;
 }
 
 .reserved,
-.priceInfo {
+.price-info {
     border: 1px solid #d8d8d8;
     border-radius: 5px;
     padding: 20px 20px;
 }
 
 
-.hrPrice,
-.timeSlotPrice {
+.hr-price,
+.time-slot-price {
     width: 100%;
     padding-left: 5px;
 }
@@ -254,64 +254,64 @@ h5 {
 
 /* -----------recommendMayLike--------------- */
 
-.recommendMayLike{
+.recommend-may-like{
     margin-bottom: 24px;
 }
-.mayLikeTitle {
+.may-like-title {
     font-weight: 600;
     letter-spacing: 0.8px;
 }
 
-.mayLikeProduct {
+.may-like-product {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
 }
 
-.mayLikeProduct a {
+.may-like-product a {
     width: 220px;
 }
 
-.mayLikeProduct img {
+.may-like-product img {
     width: 100%;
     height: 160px;
 }
 
-.mayLikeProduct a:hover img {
+.may-like-product a:hover img {
     opacity: 0.7;
     transition: 0.4s;
 }
 
-.mayLikeProduct a p:nth-child(2) {
+.may-like-product a p:nth-child(2) {
     letter-spacing: 0.8px;
 }
 
-.mayLikeProduct a p:last-child {
+.may-like-product a p:last-child {
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.7px;
 }
 
 /* --------productPriceFooter----------- */
-.productPriceFooter {
+.product-price-footer {
     position: fixed;
     display: none;
     width: 100%;
     background-color: white;
 }
 
-.productPriceFooter .btn {
+.product-price-footer .btn {
     width: 110px;
     color: white;
     background-color: #53A385;
 }
 
-.priceFooterBtn:hover {
+.price-footer-btn:hover {
     color: white;
     background-color: #568A71;
 }
 
-.priceFooterInfo a {
+.price-footer-info a {
     color: #53A385;
     font-size: 14px;
 }
@@ -326,29 +326,29 @@ h5 {
 }
 
 @media screen and (max-width:1024px) {
-    .productImgGroup .imgMain ,.productContent,.locationBlock,.payRelated div{
+    .product-img-group .img-main ,.product-content,.location-block,.pay-related div{
         width: 100%;
     }
     footer{
         display: none;
     }
-    .productImgGroup .imgSec,
-    .productPrice {
+    .product-img-group .img-sec,
+    .product-price {
         display: none;
     }
 
-    .row .productPriceFooter {
+    .row .product-price-footer {
         display: flex;
     }
 
-    .locationGroup .locationTxt,
-    .productContent .payRelated {
+    .location-group .location-txt,
+    .product-content .pay-related {
         display: block;
     }
-    .placeInfo ,.mayLikeProduct {
+    .place-info ,.may-like-product {
         justify-content: space-around;
     }
-    .recommendMayLike {
+    .recommend-may-like {
         margin-bottom: 90px;
     }
 

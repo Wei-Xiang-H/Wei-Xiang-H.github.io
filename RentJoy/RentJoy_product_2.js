@@ -99,63 +99,63 @@ footerReservedNextMonthBtn.addEventListener("click", () => {
 $("#deviceModalOpen").click(function () {
     $("#deviceModal").toggle();
     $("#overlay").toggle();
-    $("body").addClass('modalOpen');
+    $("body").addClass('modal-open');
 })
 
 $("#deviceModalClose").click(function () {
     $("#deviceModal").toggle();
     $("#overlay").toggle();
-    $("body").removeClass('modalOpen');
+    $("body").removeClass('modal-open');
 })
 
-$(".productImgGroup").click(function () {
+$(".product-img-group").click(function () {
     $("#imgCarousel").toggle();
     $("#overlay").toggle();
-    $("body").addClass('modalOpen');
+    $("body").addClass('modal-open');
 })
 
 $("#carouselClose").click(function () {
     $("#imgCarousel").toggle();
     $("#overlay").toggle();
-    $("body").removeClass('modalOpen');
+    $("body").removeClass('modal-open');
 })
 
 $('#selectDate').click(function () {
-    $(".reservedCalender").css("display", "flex");
+    $(".reserved-calender").css("display", "flex");
 })
 
 $('#footerSelectDate').click(function () {
-    $(".footerReservedCalender").css("display", "flex");
+    $(".footer-reserved-calender").css("display", "flex");
 })
 
 $(document).on('click', function (event) {
-    if (!$(event.target).is('#selectDate') && (!$(event.target).closest('.reservedCalender').length || $(event.target).is('.dateHover'))) {
-        $('.reservedCalender').hide();
+    if (!$(event.target).is('#selectDate') && (!$(event.target).closest('.reserved-calender').length || $(event.target).is('.date-hover'))) {
+        $('.reserved-calender').hide();
     }
 })
 
 $(document).on('click', function (event) {
-    if (!$(event.target).is('#footerSelectDate') && (!$(event.target).closest('.footerReservedCalender').length || $(event.target).is('.dateHover'))) {
-        $('.footerReservedCalender ').hide();
+    if (!$(event.target).is('#footerSelectDate') && (!$(event.target).closest('.footer-reserved-calender').length || $(event.target).is('.date-hover'))) {
+        $('.footer-reserved-calender ').hide();
     }
 })
 
-$(".productPrice .timePeriodGroup button").click(function(){
-    $(this).toggleClass("btnClick");
-    showReservedDetails(this,".productPrice");
+$(".product-price .time-period-group button").click(function(){
+    $(this).toggleClass("btn-click");
+    showReservedDetails(this,".product-price");
 })
 
-$(".footerProductPrice .timePeriodGroup button").click(function(){
-    $(this).toggleClass("btnClick");
-    showReservedDetails(this,".footerProductPrice");
+$(".footer-product-price .time-period-group button").click(function(){
+    $(this).toggleClass("btn-click");
+    showReservedDetails(this,".footer-product-price");
 })
 
-$(".startTime ul button").click(function() {
-    $(".startTime .dropdown-toggle").text($(this).text());
+$(".start-time ul button").click(function() {
+    $(".start-time .dropdown-toggle").text($(this).text());
 });
 
-$(".endTime ul button").click(function() {
-    $(".endTime .dropdown-toggle").text($(this).text());
+$(".end-time ul button").click(function() {
+    $(".end-time .dropdown-toggle").text($(this).text());
 });
 
 
@@ -174,11 +174,11 @@ function initCalendar() {
     renderingCalendar(currentYear, currentMonth, ".date-area3");
     showTitle(currentYear, currentMonth,".date-title4");
     renderingCalendar(currentYear, currentMonth, ".date-area4");
-    setDateStr(".currDateGroup .dateHover","#selectDate");
-    setNextMonDateStr(".nextDateGroup .dateHover","#selectDate");
-    setDateStr(".footerReservedCalender .dateHover","#footerSelectDate");
-    showSelectTime(".bodyCalender .dateHover",".productPrice");
-    showSelectTime(".footerReservedCalender .dateHover",".footerProductPrice");
+    setDateStr(".curr-date-group .date-hover","#selectDate");
+    setNextMonDateStr(".next-date-group .date-hover","#selectDate");
+    setDateStr(".footer-reserved-calender .date-hover","#footerSelectDate");
+    showSelectTime(".body-calender .date-hover",".product-price");
+    showSelectTime(".footer-reserved-calender .date-hover",".footer-product-price");
 }
 
 
@@ -196,17 +196,17 @@ function renderingCalendar(year, month, dateAreaSelector) {
         dateDom.classList.add("col");
 
         const dateEl = document.createElement("div");
-        dateEl.classList.add("h-100", "w-100", "text-center", "date", "rounded","dateHover");
+        dateEl.classList.add("h-100", "w-100", "text-center", "date", "rounded","date-hover");
         dateEl.textContent = curr.getDate();
 
         if (start <= 0 || start > lastDateOfCurrentMonth.getDate()) {
             dateEl.textContent = ""
-            dateEl.classList.remove("date","dateHover")
+            dateEl.classList.remove("date","date-hover")
         };
 
         if (curr.getTime() < today.getTime()) {
             dateEl.classList.add("text-decoration-line-through","opacity-50");
-            dateEl.classList.remove("dateHover")
+            dateEl.classList.remove("date-hover")
         };
         
 
@@ -245,16 +245,18 @@ function showTitle(year, month,titleSelector) {
 
 function showSelectTime(target,father){
     $(target).click(function(){
-        $(`${father} .timePeriodGroup`).show();
+        $(`${father} .time-period-group`).show();
         $(`${father} .time`).css("display", "flex");
+        $(`${father} .start`).text("開始時間");
+        $(`${father} .end`).text("結束時間");
     });
 }
 
 function showReservedDetails(target,father){
-    if($(target).parent().children().hasClass("btnClick")){
-        $(`${father} .productPriceDetails`).show();
+    if($(target).parent().children().hasClass("btn-click")){
+        $(`${father} .product-price-details`).show();
     }else{
-        $(`${father} .productPriceDetails`).hide();
+        $(`${father} .product-price-details`).hide();
     }
 }
 
