@@ -583,6 +583,14 @@ h5 {
         margin-right: auto;
     }
 }
+@media screen and (max-width:482px){
+    .may-like-product a{
+        width: 70%;
+    }
+    .may-like-product a img{
+        object-fit: cover;
+    }
+}
 @media screen and (max-width:450px){
     .arrow{
         margin-left: 20px;

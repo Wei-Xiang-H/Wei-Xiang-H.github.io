@@ -351,5 +351,12 @@ h5 {
     .recommend-may-like {
         margin-bottom: 90px;
     }
-
+}
+@media screen and (max-width:482px){
+    .may-like-product a{
+        width: 70%;
+    }
+    .may-like-product a img{
+        object-fit: cover;
+    }
 }
