@@ -23,7 +23,7 @@ function createDiv(obj) {
 
     //建立外框div
     let borderDiv = document.createElement("div");
-    borderDiv.classList.add("border", "m-auto", "w700", "px-3", "mb-1")
+    borderDiv.classList.add("border", "m-auto", "w700", "px-3", "mb-1" ,"bg-white")
 
     //建立input-group
     let inputGroup = document.createElement("div");

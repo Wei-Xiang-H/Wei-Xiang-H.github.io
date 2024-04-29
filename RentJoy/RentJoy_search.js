@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     //將縣市和地區json資料加到select中
     $.ajax({
